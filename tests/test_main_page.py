@@ -9,21 +9,21 @@ class TestMainPage:
     def test_transition_for_page(self,driver):
         page = MainPage(driver)
         element = page.transition_for_main_constructor()
-        assert element.text == data.constructor
+        assert element.text == data.CONSTRUCTOR
 
     @allure.title('Проверка перехода на "Ленту заказов"')
     @allure.description('Кликаем на кнопку "Лента заказов",проверяем что на странице есть блок "Лента заказов"')
     def test_transition_for_order(self, driver):
         page = MainPage(driver)
         element = page.transition_for_main_order()
-        assert element.text == data.feed_order
+        assert element.text == data.FEED_ORDER
 
     @allure.title('Проверка перехода на "Окно с деталями ингридиента"')
     @allure.description('Кликаем на кнопку "Лента заказов",кликаем по первому заказу, проверяем что на странице есть блок "Состав"')
     def test_check_popup_order(self, driver):
         page = MainPage(driver)
         element = page.ingredient_detail()
-        assert element.text == data.ingredient_detail
+        assert element.text == data.INGREDIENT_DETAILS
 
     @allure.title('Проверка закрытия высплывающего окна с деталями ингридиента"')
     @allure.description('Кликаем на ингредиент, нажимаем крестик на всплывающем окне,проверяем что всплывающее окно закрылось')
@@ -47,4 +47,4 @@ class TestMainPage:
        page.login_user(user_credentials['email'],user_credentials['password'])
        page.add_ingredient_to_order()
        element = page.place_an_order()
-       assert element.text == data.grate_order
+       assert element.text == data.GRATE_ORDER

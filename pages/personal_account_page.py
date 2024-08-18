@@ -1,7 +1,7 @@
 import urls
 import allure
 
-
+from Locators.main_locator import Main
 from pages.base_page import BasePage
 from Locators.login_locator import Login
 class PersonalAccPage(BasePage):
@@ -10,7 +10,11 @@ class PersonalAccPage(BasePage):
 
     @allure.step('Клик по Личному кабинету')
     def click_personal_acc(self):
-        self.find_element_located(Login.PERSONAL_ACC).click()
+        self.find_element_clickable(Login.PERSONAL_ACC)
+
+    @allure.step('Ожидание елемента')
+    def wait_invisible_field(self):
+        self.find_element_located(Main.ASSEMBLE_BURGER)
 
     @allure.step('Нажатие выхода из личного кабинета')
     def click_out_account(self):

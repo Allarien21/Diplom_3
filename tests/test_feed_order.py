@@ -11,7 +11,7 @@ class TestOrderFeed:
     def test_order_info(self, driver):
         order_feed = FeedOrderPage(driver)
         element = order_feed.get_info_order()
-        assert element.text == data.info_order
+        assert element.text == data.INFO_ORDER
 
     @allure.title('Проверка отображения заказа пользователя на странице "Лента заказов"')
     @allure.description('Логинимся, оформляем заказ, сравниваем номер заказа с этим номером в Ленте заказов')

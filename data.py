@@ -5,12 +5,12 @@ import allure
 
 import urls
 
-ingredient_detail = 'Детали ингредиента'
-grate_order = 'идентификатор заказа'
-done_order = 'Выполнен'
-constructor = 'Соберите бургер'
-feed_order = 'Лента заказов'
-info_order = 'Cостав'
+INGREDIENT_DETAILS = 'Детали ингредиента'
+GRATE_ORDER = 'идентификатор заказа'
+DONE_ORDER = 'Выполнен'
+CONSTRUCTOR = 'Соберите бургер'
+FEED_ORDER = 'Лента заказов'
+INFO_ORDER = 'Cостав'
 
 
 class CreateUser:
